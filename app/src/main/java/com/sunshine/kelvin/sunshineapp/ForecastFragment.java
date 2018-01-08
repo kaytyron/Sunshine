@@ -32,7 +32,7 @@ public class ForecastFragment extends Fragment {
         int id = item.getItemId();
         if (id == R.id.action_refresh){
             FetchWeatherTask fetch = new FetchWeatherTask();
-            fetch.execute();
+            fetch.execute("Accra");
             return true;
         }
         return super.onOptionsItemSelected(item);

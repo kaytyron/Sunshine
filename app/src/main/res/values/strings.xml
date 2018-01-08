@@ -2,4 +2,5 @@
     <string name="app_name">Sunshine App</string>
     <string name="action_settings">Settings</string>
     <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="API_KEY" translatable="false">56de7f3a75dec20424ce528173a1edc7</string>
 </resources>
