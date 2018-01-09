@@ -28,9 +28,9 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
         BufferedReader reader = null;
 
         // Will contain the raw JSON response as a string.
-
         String forecastJsonStr = null;
 
+        //if there is no location there is nothing to parse so ignore rest of code
         if (strings.length == 0) {
             return null;
 
