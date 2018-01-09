@@ -31,7 +31,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
 
         String forecastJsonStr = null;
 
-        if (strings.length == 0){
+        if (strings.length == 0) {
             return null;
 
         }
@@ -49,17 +49,17 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
 
             final String FORECAST_BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?";
             final String QUERY_PARAM = "q";
-            final String FORMAT_PARAM ="mode";
+            final String FORMAT_PARAM = "mode";
             final String UNITS_PARAM = "units";
             final String DAYS_PARAM = "cnt";
             final String APP_ID = "appid";
 
             Uri builtUrl = Uri.parse(FORECAST_BASE_URL).buildUpon()
                     .appendQueryParameter(QUERY_PARAM, queryParam)
-                    .appendQueryParameter(FORMAT_PARAM,mode)
-                    .appendQueryParameter(UNITS_PARAM,units)
-                    .appendQueryParameter(DAYS_PARAM,days)
-                    .appendQueryParameter(APP_ID,appID).build();
+                    .appendQueryParameter(FORMAT_PARAM, mode)
+                    .appendQueryParameter(UNITS_PARAM, units)
+                    .appendQueryParameter(DAYS_PARAM, days)
+                    .appendQueryParameter(APP_ID, appID).build();
 
             URL url = new URL(builtUrl.toString());
 
@@ -99,7 +99,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
             // If the code didn't successfully get the weather data, there's no point in attempting
             // to parse it.
             return null;
-        } finally{
+        } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
             }
@@ -113,3 +113,4 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
         }
     }
 }
+
